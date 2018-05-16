@@ -1,3 +1,4 @@
+<?php include 'database.php'; ?> <!-- that should include database.php in this quiz.php file-->
 <!DOCTYPE html>
 <html>
 <head>
