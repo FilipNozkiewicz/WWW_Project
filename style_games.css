@@ -1,0 +1,64 @@
+.header{
+	font-size: 3vw;
+	text-align: center;
+	margin-top: 5px;
+	background-color: #0CFFFFFF;
+	background-image: url("images/retro.jpg");
+	width: 100%;
+
+}
+.head{
+	height: 30%;
+	width: 30%;
+}
+	
+.fotka{
+	
+	width: 50%;
+}
+.basic{
+	text-align: center;
+	
+
+}
+.snake{
+	
+	padding-top: 5%;
+	padding-bottom: 5%;
+
+
+}
+.tic-tac{
+	
+	padding-top: 5%;
+	padding-bottom: 5%;
+
+}
+.gallows{
+	
+	padding-top: 5%;
+	padding-bottom: 5%;
+
+}
+.pong{
+	
+	padding-top: 5%;
+	padding-bottom: 5%;
+
+}
+.but{
+	width: 50%;
+	min-height: 40px;
+	
+}
+.xd{
+	background-image: url("images/texture.jpg");
+	
+	background-size: 100%;
+	margin-left: 1%;
+	margin-right: 1%;
+
+}
+
+
+

@@ -1,0 +1,68 @@
+body{
+	background-image: url("../images/cody.jpg");
+	
+	background-size: 100%;
+
+
+}
+.jumbotron{
+	text-align: center;
+}
+
+
+.main{
+	
+	font-size: 2vw;
+	color: #38F841;
+	left: 20%;
+
+}
+
+
+a.start{
+	display: inline-block;
+	border: 1px dotted #ccc;
+	background: #f4f4f4;
+
+}
+.spacer{
+	margin-top: 20%;
+}
+.current{
+	border: 2px dotted;
+	border-color: black;
+	background: #D8D6D6;
+	color: #0A0000;
+}
+.question{
+	border: 2px dotted;
+	border-color: black;
+	background: #D8D6D6;
+	color: #0A0000;
+}
+form{
+	background: url("../images/texture.jpg");
+}
+form > ul{
+	list-style-type: none;
+}
+.main_input{
+
+	margin-left: 3%;
+	background: #585555;
+
+}
+.input_add{
+	width: 5%;
+	
+}
+label{
+	display: inline-block;
+	width: 40%;
+
+}
+input{
+	display: inline-block;
+	width: 30%;
+}
+
