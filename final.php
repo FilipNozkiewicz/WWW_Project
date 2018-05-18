@@ -1,3 +1,4 @@
+<?php session_start(); ?> <!-- on every page where session is needed-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,8 +22,10 @@
 		<div class="container main">
 			<h2>You are Done</h2>
 				<p>Congrats! You have completed the test</p>
-				<p>Final Score 10</p>
-				<a href="question.php?n=1" class="start">Take Again</a>
+				<p>Final Score: <?php echo $_SESSION['score'];?></p>
+                 <?php $_SESSION['score'] = 0?>
+				<a href="questions.php?n=1" class="start">Take Again</a>
+
 		</div>  
 		
 		

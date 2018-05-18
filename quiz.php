@@ -1,4 +1,10 @@
 <?php include 'database.php'; ?> <!-- that should include database.php in this quiz.php file-->
+<?php
+// Get the Total number of questions
+$query = "select * from `questions` ";
+$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+$total = $result->num_rows; // return rows number
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,9 +28,9 @@
 		</section>
 		<div class="container main">
 			<ul>
-				<li><strong>Number of Questions: </strong>10</li>
+				<li><strong>Number of Questions: </strong><?php echo $total?></li>
 				<li><strong>Type: </strong>Single Choice</li>
-				<li><strong>Estimated Time: </strong>5 minutes</li>
+			<!--	<li><strong>Estimated Time: </strong><//?php echo $total * .5?> minutes</li>-->
 			</ul>
 			<a href="questions.php?n=1" class="start" style="color:#1FF142;">Start Quiz</a>
 		</div>  <!-- Redirection to the specific question at the beginning in 1-->

@@ -8,6 +8,7 @@ $db_pass = "admin123#";
 
 // Create Mysql Object
 $mysqli = new mysqli($db_host , $db_user , $db_pass , $db_name); // create a DB object
+// It is essential to be in that sequence
 
 // ERROR HANDLER
 if($mysqli->connect_error) { // if error has happend wtf (;
@@ -15,6 +16,6 @@ if($mysqli->connect_error) { // if error has happend wtf (;
     exit(); // exit current script and can also print message as an argument
 }
 else{
-    echo "xdddd";
+
 }
 ?>

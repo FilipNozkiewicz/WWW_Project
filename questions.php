@@ -1,3 +1,29 @@
+<?php include 'database.php'; ?>
+<?php session_start();?>
+<!-- PHP logic-->
+<?php
+    // Set question Number
+    $number = (int)$_GET['n']; // what we put in there // and  casting variable
+
+// Get the question
+// Prepare the query
+    $query = "select * from `questions` where question_number = $number"; // importan those are keys above the tab
+    // Get result
+    $result = $mysqli->query($query) or die($mysqli->error.__LINE__); // method run on query  or die is gonna cut the script
+/// error and dthe line
+  $question = $result->fetch_assoc(); // return the row assosiated with that query
+
+// Get choices
+    $query = "select * from `choices`  where  question_number = $number";
+
+    $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
+   // $question = $result->fetch_assoc(); // return that row
+    $query_total = "select * from `questions`";
+    $result_rows = $mysqli->query($query_total) or die($mysqli->error.__LINE__);
+    $total = $result_rows->num_rows;
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,22 +45,23 @@
 			<h2>Test if you are smarter than the author</h2>
 		</section>
 		<div class="container main">
-			<div class="current">Question 1 of 10</div>
+			<div class="current">Question <?php echo $question['question_number'];?> of <?php echo $total;?></div>
 			<p class="question">
-				What is the most popular linux shell
+				<?php echo $question['text'];?> <!-- the variable of question table is called text-->
 			</p>
-			<form method="post" action="process.php">
+			<form method="post" action="process.php">  <!-- ustawia mi zmienne do post-->
 				<ul class="choices">
-					<li><input name="choice" type="radio" value="1" /> CCP</li>
-					<li><input name="choice" type="radio" value="1" /> SSH</li>
-					<li><input name="choice" type="radio" value="1" /> PowerShell</li>
-					<li><input name="choice" type="radio" value="1" /> bash</li>
+                    <?php while ($row = $choices->fetch_assoc()): ?>
+                     <li><input name="choice" type="radio" value="<?php echo $row['id'];?>" /><?php echo $row['text'];?></li>
+                    <?php endwhile;?>
+
 				</ul>
 				<input class="main_input" type="submit" value="Submit"/>
+				<input  type="hidden" name="number" value="<?php echo $number;?>"/>
 			</form>
 		</div>  
 		
-		
+
 	</div>
 </body>
 <!-- process.php has to only process data it dows not haa a view -->
