@@ -5,6 +5,9 @@ var p1V , p2V;  // velocity  pixels per second
 var ball , ballV;
 var start = false;
 var pause = false;
+var song;
+
+
 
 document.addEventListener("keydown" , startgame);
 
@@ -22,7 +25,7 @@ function setup(){ // runs only once
 	// velocity  pixels per second
 	p1V = p2V = 0;
 	p1S = p2S = 0;  // scores
-	
+
 	textAlign(CENTER);
 	textSize(30);
 	fill(255);

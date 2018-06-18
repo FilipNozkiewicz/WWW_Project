@@ -58,6 +58,9 @@
 	width: 40%;
 
 }
+.dd > img{
+	border: 10px dotted;
+}
 .description1{
 	display: flex;
 	font-size: 1vw;

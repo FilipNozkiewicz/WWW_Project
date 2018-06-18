@@ -16,6 +16,6 @@ if($mysqli->connect_error) { // if error has happend wtf (;
     exit(); // exit current script and can also print message as an argument
 }
 else{
-
+ //drop daabase'quiz'
 }
 ?>
